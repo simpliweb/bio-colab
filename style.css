@@ -1,0 +1,171 @@
+/* Typography */
+* {
+    margin: 0;
+}
+
+body {
+    font-family: 'Pathway Extreme', sans-serif;
+    text-transform: capitalize;
+    color: #000000;    
+}
+
+ul {
+    margin: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+main, header {
+    background-color: #E5E5FF;
+}
+
+.wrapper {
+    margin-right: auto;
+    margin-left: auto;    
+    max-width: 960px;    
+    width: 100%;
+    padding: 0;
+    /* padding-right: 10px;
+    padding-left: 10px; */
+}
+
+/* skip link */
+.skip-link {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #FFA02A;
+    color: #5A60EA;
+    font-size: 1.5rem;
+    padding: 15px 0;
+    position: absolute;
+    left: -1000px;
+    top: 0;
+    z-index: 999;
+    border: 0;
+    font-weight: 700;
+}
+
+.skip-link:focus {
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+/* nav bar */
+.main-nav {
+    background-color: #5A60EA;   
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    max-width: 960px;
+    width: 100%;
+}
+
+.main-nav a {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 13px;
+}
+
+.main-nav a:hover {
+    color: #FF6DCD;
+    cursor: pointer;
+}
+
+/* #about section */
+
+#about {
+    padding-top: 100px;
+}
+
+h1 {
+    margin-top: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.about-me {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #FFA02A;
+}
+
+.about-photo img{
+    width: 100%;
+    display: block;
+    margin: 8px;
+    border-radius: 10px;
+}
+
+.about-info {
+    margin: 8px 20px;
+}
+
+/* #contact section */
+
+.contact {
+    margin-top: 20px;
+}
+
+.contact-details ul li a {
+    color: #45DFCD;
+    float: right;
+    margin: 5px 20px 0 0;
+}
+
+.contact-details ul li a:hover {
+    color: #000000;
+    cursor: pointer;
+}
+
+.work ul {
+    padding-left: 30px;
+}
+
+.work ul li a {
+    color: #000000;
+    margin-right: 10px;
+}
+
+.work ul li button {
+    text-transform: uppercase;
+    border-radius: 3px;
+    padding: 5px 8px;
+    background-color: #45DFCD;
+    border: #45DFCD;
+    font-weight: bold;
+}
+
+.work ul li button:hover {
+    color: #45DFCD;
+    background-color: #000000;
+    border: #000000;
+}
+
+/* #projects section */
+#projects {
+    margin: 50px 0;
+    padding: 100px 30px;
+    /* background-color: #FF6DCD; */
+}
+
+
+/* footer */
+footer {
+    padding: 50px 0;
+    /* position: fixed; */
+    bottom: 0;
+    max-width: 960px;
+    width: 100%;
+    background-color: #5A60EA;
+    color: white;
+    text-align: center;
+}

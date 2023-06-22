@@ -5,72 +5,81 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/0c33a27114.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Pathway+Extreme:wght@300&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
+    <script defer type="module" src="script.js"></script>
 
     <title>home page</title>
 </head>
 <body>
     <a href="#about" class="skip-link">skip to the main content.</a>
     
-    <div class="main-nav">
-        <nav class="wrapper">
-            <ul>
-                <li>
-                    <a href="#home">home</a>
-                </li>
-                <li>
-                    <a href="#about">about</a>
-                </li>
-                <li>
-                    <a href="#projects">projects</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
+    <div class="wrapper">
+        <header>
+            <div class="main-nav">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#home">home</a>
+                        </li>
+                        <li>
+                            <a href="#about">about</a>
+                        </li>
+                        <li>
+                            <a href="#projects">projects</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
 
-    <div class="mobile-nav">
-        <div class="wrapper">
-            <nav class="top-nav">
-                <button class="menu-open"> 
-                    <i class="fa-solid fa-bars" alt="three white lines of icon for nav bar"></i>
-                </button>
-    
-            </nav> <!-- END .topNav-->
-        </div> <!-- END .wrappper -->
-    
-        <div class="drop-down-nav">
-            <button class="menu-close">
-                <i class="fa-solid fa-xmark" alt="x for closing nav bar drop down"></i>
-            </button>
-    
-            <nav>
-                <ul class="drop-down-menu">
-                    <li><a href="#home">home</a></li>
-                    <li><a href="#about">about</a></li>
-                    <li><a href="#projects">projects</a></li>
-                </ul>
-            </nav>
-        </div> <!-- END .drop-down-nav -->
-    </div> <!-- END .mobile-nav -->
+            <div class="mobile-nav">
+                <nav class="top-nav">
+                    <button class="menu-open"> 
+                        <i class="fa-solid fa-bars" alt="three white lines of icon for nav bar"></i>
+                    </button>
+        
+                </nav> <!-- END .topNav-->
+            
+                <div class="drop-down-nav">
+                    <button class="menu-close">
+                        <i class="fa-solid fa-xmark" alt="x for closing nav bar drop down"></i>
+                    </button>
+            
+                    <nav>
+                        <ul class="drop-down-menu">
+                            <li><a href="#home">home</a></li>
+                            <li><a href="#about">about</a></li>
+                            <li><a href="#projects">projects</a></li>
+                        </ul>
+                    </nav>
+                </div> <!-- END .drop-down-nav -->
+            </div> <!-- END .mobile-nav -->
+        </header>
+    </div> <!-- END .wrapper -->
 
     <main class="wrapper">
         <section id="about">
-            <div data-aos="fade-up">
-                <h1>mobile friendly, front end web developer.</h1>
-                <div class="about-me">
+            <div data-aos="fade-up">                
+                <div class="about-me">                    
                     <div class="about-photo">
                         <img src="./assets/profile-photo.jpg" alt="photoOfMyself">
                     </div>
 
                     <div class="about-info">
+                        <h1>mobile friendly, front end web developer.</h1>
                         <p>
                             i am jie eun, a Front-End Web Developer based in Toronto. i love writing
                             clean and accessible code to create user-friendly responsive web-applications. i aspire to become a
                             fullstack developer.
                         </p>
-                                              
-                        <ul class="contact">
+                    </div>    
+                </div>
+                <div class="contact">
+                    <div class="contact-details">                         
+                        <ul>
                             <li>
                                 <a href="mailto: jieeunlee91@gmail.com">
                                     <i class="fa-solid fa-envelope fa-2xl"></i>
@@ -93,8 +102,9 @@
                                 </a>
                             </li>
                         </ul>
-
-                        <ul class="resume">
+                    </div>
+                    <div class="work">
+                        <ul>
                             <li>
                                 <a>professional history</a>
                                 <button>download cv</button>
@@ -111,8 +121,8 @@
             <div class="project-details">
                 <div class="first-project">                    
                     <div class="project-info">
-                        <h3>It's All About Sophie</h3>
-                        <p>A multi-page blog page built with HTML, SCSS, JavaScript.</p>                        
+                        <!-- <h3>It's All About Sophie</h3>
+                        <p>A multi-page blog page built with HTML, SCSS, JavaScript.</p>                         -->
                         <button>
                             <a href="https://jieeunlee.netlify.app/" target="blank">View live</a>
                         </button>
@@ -136,6 +146,11 @@
                 </div>
             </div>
         </section>
+        <!-- END #projects section -->
+        <footer>
+            <p>© 2023 Jie eun Lee. All rights reserved.</p>
+        </footer>
     </main>
+        <!-- END main section -->
 </body>
 </html>
