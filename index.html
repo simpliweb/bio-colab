@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0c33a27114.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+
+    <title>home page</title>
+</head>
+<body>
+    <a href="#about" class="skip-link">skip to the main content.</a>
+    
+    <div class="main-nav">
+        <nav class="wrapper">
+            <ul>
+                <li>
+                    <a href="#home">home</a>
+                </li>
+                <li>
+                    <a href="#about">about</a>
+                </li>
+                <li>
+                    <a href="#projects">projects</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="mobile-nav">
+        <div class="wrapper">
+            <nav class="top-nav">
+                <button class="menu-open"> 
+                    <i class="fa-solid fa-bars" alt="three white lines of icon for nav bar"></i>
+                </button>
+    
+            </nav> <!-- END .topNav-->
+        </div> <!-- END .wrappper -->
+    
+        <div class="drop-down-nav">
+            <button class="menu-close">
+                <i class="fa-solid fa-xmark" alt="x for closing nav bar drop down"></i>
+            </button>
+    
+            <nav>
+                <ul class="drop-down-menu">
+                    <li><a href="#home">home</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#projects">projects</a></li>
+                </ul>
+            </nav>
+        </div> <!-- END .drop-down-nav -->
+    </div> <!-- END .mobile-nav -->
+
+    <main class="wrapper">
+        <section id="about">
+            <div data-aos="fade-up">
+                <h1>mobile friendly, front end web developer.</h1>
+                <div class="about-me">
+                    <div class="about-photo">
+                        <img src="./assets/profile-photo.jpg" alt="photoOfMyself">
+                    </div>
+
+                    <div class="about-info">
+                        <p>
+                            i am jie eun, a Front-End Web Developer based in Toronto. i love writing
+                            clean and accessible code to create user-friendly responsive web-applications. i aspire to become a
+                            fullstack developer.
+                        </p>
+                                              
+                        <ul class="contact">
+                            <li>
+                                <a href="mailto: jieeunlee91@gmail.com">
+                                    <i class="fa-solid fa-envelope fa-2xl"></i>
+                                </a>
+    
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/jie-eun-lee/" target="_blank">
+                                    <i class="fa-brands fa-linkedin fa-2xl"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/simpliwebt" target="_blank">
+                                    <i class="fa-brands fa-github fa-2xl"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/jieeunlee91" target="_blank">
+                                    <i class="fa-brands fa-twitter fa-2xl"></i>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <ul class="resume">
+                            <li>
+                                <a>professional history</a>
+                                <button>download cv</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>    
+            </div>    
+        </section>
+        <!-- ENDS #about section -->
+    
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project-details">
+                <div class="first-project">                    
+                    <div class="project-info">
+                        <h3>It's All About Sophie</h3>
+                        <p>A multi-page blog page built with HTML, SCSS, JavaScript.</p>                        
+                        <button>
+                            <a href="https://jieeunlee.netlify.app/" target="blank">View live</a>
+                        </button>
+                        <button>
+                            <a href="https://github.com/simpliweb/jieeunLeeProjectOne" target="blank">Git hub</a>
+                        </button>
+                    </div>
+                </div>
+                <div class="second-project">                    
+                    <div class="project-info">
+                        <h3>Ugly pokemon</h3>
+                        <p>Pokmeon search app built with HTML, SCSS, JavaScript
+                        </p>
+                        <button>
+                            <a href="https://uglypokemon.netlify.app/" target="blank">View live</a>
+                        </button>
+                        <button>
+                            <a href="https://github.com/UglyPokemon/UglyPokemon" target="blank">Git hub</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
