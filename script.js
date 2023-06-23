@@ -1,38 +1,44 @@
+// in order to use Github Rest API to display repository information
 import { Octokit } from "https://esm.sh/octokit";
 
 const octokit = new Octokit({
   auth: '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',
 });
 
-async function info() {
+async function orgInfo() {
     try {
-    const result = await octokit.request('GET /repos/{owner}/{repo}/issues', {
-      owner: 'simpliweb',
-      repo: 'jieeunLeePortfolio',
-      title: "Created with the REST API",
-      body: "This is a test issue created by the REST API",
-      
-    });
-    console.log(result);
-    console.log(
+      const result = await octokit.request('GET /orgs/{org}/repos', {
+        org: 'simpliweb-projects',
+        headers: {
+          'X-GitHub-Api-Version': '2022-11-28',
+        },
+      });
+
+      // display repository information
+      const titles = document.querySelectorAll('.project-title');
+      const details = document.querySelectorAll('.paragraph');
+      const pushedAt = document.querySelectorAll('.updatedAt');
+
+      result.data.forEach((repo, index) => {
+        titles[index].textContent = repo.name;
+        details[index].textContent = repo.description;
+
+        // format display resository pushed date 
+        const pushed = new Date(repo.pushed_at);
+        const formattedDate = pushed.toLocaleDateString('en-CA', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+        });        
+        pushedAt[index].textContent = `${formattedDate}`;
+      });
+      console.log(
         `Success! Status: ${result.status}. Rate limit remaining: ${result.headers['x-ratelimit-remaining']}`
-    );
+      );
     } catch (error) {
     console.log(
         `Error! Status: ${error.status}. Rate limit remaining: ${error.headers['x-ratelimit-remaining']}. Message: ${error.response.data.message}`
     );
-    }      
+    }     
 }
-info();
-
-
-
-// function displayRepositoryInfo(data) {
-//   const cocktail = data.drinks[0];
-//   const cocktailDiv = document.getElementById('cocktail');
-//   // cocktail name
-//   const cocktailName = cocktail.strDrink;
-//   const heading = document.createElement('h1');
-//   heading.innerHTML = cocktailName;
-//   cocktailDiv.appendChild(heading);
-// }
+orgInfo();

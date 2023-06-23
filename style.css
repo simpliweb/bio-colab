@@ -32,8 +32,6 @@ main, header {
     max-width: 960px;    
     width: 100%;
     padding: 0;
-    /* padding-right: 10px;
-    padding-left: 10px; */
 }
 
 /* skip link */
@@ -82,7 +80,7 @@ main, header {
 /* #about section */
 
 #about {
-    padding-top: 100px;
+    padding: 50px 30px 0;
 }
 
 h1 {
@@ -127,7 +125,7 @@ h1 {
 }
 
 .work ul {
-    padding-left: 30px;
+    padding-left: 20px;
 }
 
 .work ul li a {
@@ -153,15 +151,43 @@ h1 {
 /* #projects section */
 #projects {
     margin: 50px 0;
-    padding: 100px 30px;
-    /* background-color: #FF6DCD; */
+    padding: 0 30px 0;
 }
 
+.first-project, .second-project {
+    padding: 20px 0;
+    border-bottom: 1px solid #000000;
+}
+
+h2, h3, p {
+    padding: 0 0 5px;
+}
+
+.project-button {
+    background-color: #FF6DCD;
+    border-color: #FF6DCD;
+    border-radius: 2px;
+    padding: 4px 7px;
+}
+
+.project-button:hover {
+    background-color: #000000;
+    border-color: #000000;
+    border-radius: 2px;
+    padding: 4px 7px;
+}
+
+.project-button a:hover {
+    color: #FF6DCD;
+}
+
+.live-link {
+    color: #000000;
+}
 
 /* footer */
 footer {
     padding: 50px 0;
-    /* position: fixed; */
     bottom: 0;
     max-width: 960px;
     width: 100%;
