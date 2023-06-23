@@ -2,7 +2,7 @@
 import { Octokit } from "https://esm.sh/octokit";
 
 const octokit = new Octokit({
-  auth: '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',
+  auth: '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',
 });
 
 async function orgInfo() {
