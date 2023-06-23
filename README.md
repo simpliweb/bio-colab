@@ -1,2 +1,2 @@
 # bio-colab
-biography for CoLab
+Single-page biography for Co.Lab made with HTML, CSS, JavaScript.
