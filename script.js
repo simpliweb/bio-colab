@@ -2,9 +2,9 @@
 import { Octokit } from "https://esm.sh/octokit";
 
 const octokit = new Octokit({
-  auth: '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',
+  auth: process.env.TOKEN,
 });
-
+// process.env.TOKEN
 async function orgInfo() {
     try {
       const result = await octokit.request('GET /orgs/{org}/repos', {
