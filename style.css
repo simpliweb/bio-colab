@@ -29,7 +29,7 @@ main, header {
 .wrapper {
     margin-right: auto;
     margin-left: auto;    
-    max-width: 960px;    
+    max-width: 960px;  
     width: 100%;
     padding: 0;
 }
@@ -77,10 +77,14 @@ main, header {
     cursor: pointer;
 }
 
+.mobile-nav {
+    display: none;
+}
+
 /* #about section */
 
 #about {
-    padding: 50px 30px 0;
+    padding: 150px 30px 0;
 }
 
 h1 {
@@ -194,4 +198,108 @@ footer {
     background-color: #5A60EA;
     color: white;
     text-align: center;
+}
+
+
+
+/* responsive navbar */
+
+@media (max-width: 768px) {
+    .main-nav {
+        display: none;
+    }
+    
+    .mobile-nav {
+        display: block;
+    }
+
+    .menu-open {
+        background-color: inherit;
+        border: none;
+        font-size: 2rem;
+        margin: 5px 0 0 10px;
+        color:#5A60EA;
+    }
+
+    .menu-open:hover {
+        color: #45DFCD;
+        cursor: pointer;
+    }
+
+    .drop-down-nav {        
+        display: block;
+        background-color: #c0eae1;
+        opacity: 0.9;
+        height: 100%;
+        max-width: 768px;
+        left: -768px;
+        position: fixed;
+        top: 0;
+        z-index: 20;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 20px;
+        width: 100%;
+        padding: 30px;
+        transition: 0.3s;
+    }
+
+    .open {
+        left: 0;
+    }
+    
+    .menu-close {      
+        float: left;
+        border: none;
+        background-color: inherit;
+    }
+
+    .menu-close i {
+        font-size: 2rem;
+    }
+
+    .menu-close:hover, .drop-down-menu a:hover{
+        color: #FF6DCD;
+    }
+
+    .drop-down-menu li {
+        margin: 6px 0 20px 5px;
+    }
+    
+    .drop-down-menu li a {
+        color: #000000;
+        font-size: 2rem;
+    }    
+}
+
+@media (max-width: 320px) {
+    .about-me {        
+        display: inline-block;
+        padding: 10px 20px 12px;
+    }
+
+    .about-photo img {
+        margin: 10px 0;
+    }
+
+    .about-info {
+        margin: 8px 5px 0;
+    }
+
+    .contact {
+        display: inline-block;
+    }
+
+    .contact-details ul {
+        padding: 0;
+        margin-right: 8px;
+    }
+
+    .contact-details ul a {
+        padding-bottom: 20px;
+    }
+
+    .work ul {
+        padding: 30px 0 0 45px;
+    }
 }

@@ -42,3 +42,37 @@ async function orgInfo() {
     }     
 }
 orgInfo();
+
+
+// responsive drop-down-nav
+document.addEventListener("DOMContentLoaded", () => {
+  console.log('running')  
+    const open = document.querySelector('.menu-open');
+    const close = document.querySelector('.menu-close');
+    const menu = document.querySelector('.drop-down-nav');
+    const home = document.getElementById('home-anchor');
+    const about = document.getElementById('about-anchor');
+    const projects = document.getElementById('projects-anchor');
+
+
+    open.addEventListener('click', (e) => {      
+        menu.classList.add('open');
+    })
+
+    close.addEventListener('click', (e) => {
+        menu.classList.remove('open');
+    })
+
+    home.addEventListener('click', (e) => {
+      menu.classList.remove('open');
+    }); 
+
+    about.addEventListener('click', (e) => {
+      menu.classList.remove('open');
+    }); 
+
+    projects.addEventListener('click', (e) => {
+      menu.classList.remove('open');
+    }); 
+
+}) // END drop-down-nav
