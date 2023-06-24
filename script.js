@@ -1,11 +1,8 @@
 // in order to use Github Rest API to display repository information
 import { Octokit } from "https://esm.sh/octokit";
 
-const octokit = new Octokit({
-  auth: process.env.TOKEN,
-});
+const octokit = new Octokit();
 
-// process.env.TOKEN
 async function orgInfo() {
     try {
       const result = await octokit.request('GET /orgs/{org}/repos', {
