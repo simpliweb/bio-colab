@@ -2,7 +2,7 @@
 import { Octokit } from "https://esm.sh/octokit";
 
 const octokit = new Octokit({
-  auth: TOKEN,
+  auth: process.env.TOKEN,
 });
 
 // process.env.TOKEN
